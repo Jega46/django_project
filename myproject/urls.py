@@ -15,12 +15,14 @@ Including another URLconf
 """
 
 
-from django.conf.urls import url
 from django.contrib import admin
+from django.urls import path
 from myapp import views  # Import views from your app
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^$', views.home, name='home'),  # Root URL pattern
-   
+    path('admin/', admin.site.urls),  # Admin site URL
+    
+    path('', views.login_view, name='login'),  # Login page URL
+    path('home/', views.home, name='home'),  # Root URL (home page)
 ]
+
