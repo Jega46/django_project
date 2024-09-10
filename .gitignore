@@ -1,0 +1,5 @@
+.venv
+__pycache*
+myproject/__pycache__*
+venv
+myapp/migrations/__pycache__*
